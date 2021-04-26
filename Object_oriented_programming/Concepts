@@ -1,0 +1,3 @@
+execution context: function is called by object, that object  is hold by this or the place where the function is called, is pointed by this.
+this can be called outside the function.we can write this directly inside the script.
+this will point to global scope in that case.

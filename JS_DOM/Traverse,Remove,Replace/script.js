@@ -1,0 +1,11 @@
+temp2.parentElement.parentElement.previousElementSibling.children[0].children[3]
+temp2.previousElementSibling
+temp2.nextElementSibling
+temp2.parentElement.remove(mi)
+temp2.parentElement
+temp2.parentElement.remove()
+temp2.parentElement.parentElement
+de.appendChild(mi.parentElement)
+temp2.remove()
+de.previousElementSibling.previousElementSibling
+de.previousElementSibling.previousElementSibling.children[0].appendChild(temp2)
