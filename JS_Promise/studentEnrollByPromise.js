@@ -1,4 +1,5 @@
 const students=[
+    String.fromCodePoint(0x1F608),
     {name: "Pragya", subject: "Javascript"},
     {name: "Siya", subject: 'machine Learning'},
     {name: "Min yu", subject: 'cloud computing'}
