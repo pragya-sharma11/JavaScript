@@ -18,7 +18,7 @@ async function task(){
         helloSayer("Neha", 2),
         helloSayer("Ritu",4)
     ])
-    
+    //await basically executes the array passed to it then only goes to next line of code.
     console.log("---------------next batch--------------")
 
     await Promise.all([
