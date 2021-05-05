@@ -27,3 +27,5 @@ async function task(){
         helloSayer("Rishav",4)
     ])
 }
+
+task()
