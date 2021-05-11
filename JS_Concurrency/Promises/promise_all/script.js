@@ -49,10 +49,10 @@ Promise.all([
     download("http://cb.lk/logo.png"),
     download("http://cb.lk/banner.png"),
     download("http://cb.lk/promo.png")
-])
-.then(function(values){
+]) //all 3 execute parallely
+.then(function(values){ //values passed in resolve comes to here!!
     console.log(values)
 })
-.catch((err)=>{
+.catch((err)=>{ //if anyone of them have error then then() will not work.
     console.error(err)
 })
