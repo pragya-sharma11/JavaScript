@@ -18,7 +18,7 @@ function resize(filename){
             reject(new Error("Filename does not exist"))
         } else{
             setTimeout(function (){
-                let resizedFile = fileName+"-resize"+".png";
+                let resizedFile = fileName.spit(".")[0]+"-resize.png";
                 resolve(resizedFile)
             })
         }
