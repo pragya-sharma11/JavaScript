@@ -47,4 +47,10 @@ download("http://cb.lk/logo.jpg")
     }).catch((err)=>{
         console.error(err)
     })
+    /**
+     * this catch catches all errors in the chain. if url is not http then
+     * it runs the resolve of download function
+     * If url is http but extension is not png then 
+     * it run the reject of resize function.
+     */
  
