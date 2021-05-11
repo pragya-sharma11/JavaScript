@@ -1,7 +1,8 @@
 function download(url){
     return new Promise(function(resolve, reject){
         if(!url.startsWith("http")){
-           reject(new Error("url does not start with http")) 
+            reject()
+            //reject(new Error("url does not start with http")) 
         }
         else{
             setTimeout(function(){
@@ -15,7 +16,8 @@ function download(url){
 function resize(filename){
     return new Promise(function(resolve, reject){
         if(!filename.endsWith(".png")){
-            reject(new Error("Filename is not png"))
+            reject()
+            //reject(new Error("file is not png"))
         } else{
             setTimeout(function (){
                 let resizedFile = filename.split(".")[0]+"-resize.png";
@@ -33,8 +35,10 @@ download('http://cb.lk/logo.png')
     })
 */
 //can also do like
-download("http://cb.lk/logo.png")
+download("htp://cb.lk/logo.pnng")
     .then(resize)
     .then((resizedFile)=>{
         console.log("resize file is at : "+resizedFile)
+    }).catch(()=>{
+        console.log('extension is not png')
     })
