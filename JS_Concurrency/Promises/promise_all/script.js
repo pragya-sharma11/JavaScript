@@ -44,3 +44,12 @@ function upload(resizefile){
     }
 })
 }
+
+Promise.all([
+    download("http://cb.lk/logo.png"),
+    download("http://cb.lk/banner.png"),
+    download("http://cb.lk/promo.png")
+])
+.then(function(values){
+    console.log(values)
+})
