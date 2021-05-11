@@ -53,3 +53,6 @@ Promise.all([
 .then(function(values){
     console.log(values)
 })
+.catch((err)=>{
+    console.error(err)
+})
