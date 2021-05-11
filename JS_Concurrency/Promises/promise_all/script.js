@@ -60,6 +60,12 @@ Promise.all([
      * This thing returns Promise 
      */
 })
+.then((resizeValues)=>{
+    return Promise.all(resizeValues.map(upload))
+})
+.then((uploadValues)=>{
+    console.log(uploadValues)
+})
 .catch((err)=>{ //if anyone of them have error then then() will not work.
     console.error(err)
 })
