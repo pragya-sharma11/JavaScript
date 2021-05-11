@@ -28,3 +28,19 @@ function resize(filename){
         }
     })
 }
+
+function upload(resizefile){
+    return new Promise((resolve, reject)=>{
+    if(!resizefile.split['-']==-resize.png){
+        reject(new Error("File is not resized"))
+    }
+    else{
+        console.log("start uploading the file : " + resizefile)
+        setTimeout(()=>{
+            let uploadUrl="http://upload.file/"+resizefile;
+            resolve(uploadUrl);
+
+        }, 3000)
+    }
+})
+}
