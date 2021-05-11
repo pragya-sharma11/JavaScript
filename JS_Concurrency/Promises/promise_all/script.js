@@ -51,7 +51,14 @@ Promise.all([
     download("http://cb.lk/promo.png")
 ]) //all 3 execute parallely
 .then(function(values){ //values passed in resolve comes to here!!
-    console.log(values)
+    //console.log(values)
+    return Promise.all(values.map(resize))
+    /**
+     * map the values to resize function to perform resize operation on downloaded file.
+     * values.map(function(item){resize(item)})
+     * This thing can be written as values.map(resize)
+     * This thing returns Promise 
+     */
 })
 .catch((err)=>{ //if anyone of them have error then then() will not work.
     console.error(err)
