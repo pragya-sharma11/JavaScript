@@ -16,8 +16,8 @@ function download(url){
 function resize(filename){
     return new Promise(function(resolve, reject){
         if(!filename.endsWith(".png")){
-            reject()
-            //reject(new Error("file is not png"))
+            //reject()
+            reject(new Error("file is not png"))
         } else{
             setTimeout(function (){
                 let resizedFile = filename.split(".")[0]+"-resize.png";
@@ -26,7 +26,7 @@ function resize(filename){
         }
     })
 }
-
+/*
 download('ftp://cb.lk/logo.png')
     .then(function (filename){
         resize(filename).then(function (resizedFile){
@@ -37,14 +37,14 @@ download('ftp://cb.lk/logo.png')
     }).catch((err)=>{
         console.error(err)//same as console.log but console.error() prints in red color
     })
-
+*/
 //can also do like
-/*
-download("htp://cb.lk/logo.pnng")
+
+download("http://cb.lk/logo.jpg")
     .then(resize)
     .then((resizedFile)=>{
         console.log("resize file is at : "+resizedFile)
-    }).catch(()=>{
-        console.log('extension is not png')
+    }).catch((err)=>{
+        console.error(err)
     })
-    */
+ 
