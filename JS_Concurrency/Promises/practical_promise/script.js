@@ -18,9 +18,16 @@ function resize(filename){
             reject(new Error("Filename is not png"))
         } else{
             setTimeout(function (){
-                let resizedFile = fileName.spit(".")[0]+"-resize.png";
+                let resizedFile = filename.split(".")[0]+"-resize.png";
                 resolve(resizedFile)
             })
         }
     })
 }
+
+download('http://cb.lk/logo.png')
+    .then(function (filename){
+        resize(filename).then(function (resizedFile){
+            console.log("resized file is at : "+resizedFile)
+        })
+    })
