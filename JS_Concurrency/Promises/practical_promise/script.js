@@ -1,8 +1,8 @@
 function download(url){
     return new Promise(function(resolve, reject){
         if(!url.startsWith("http")){
-            reject()
-            //reject(new Error("url does not start with http")) 
+            //reject()
+            reject(new Error("url does not start with http")) 
         }
         else{
             setTimeout(function(){
