@@ -26,15 +26,20 @@ function resize(filename){
         }
     })
 }
-/*
+
 download('http://cb.lk/logo.png')
     .then(function (filename){
         resize(filename).then(function (resizedFile){
             console.log("resized file is at : "+resizedFile)
+        }).catch(()=>{
+            console.log("extension is not png")
         })
+    }).catch(()=>{
+        console.log("Protocol is not http.")
     })
-*/
+
 //can also do like
+/*
 download("htp://cb.lk/logo.pnng")
     .then(resize)
     .then((resizedFile)=>{
@@ -42,3 +47,4 @@ download("htp://cb.lk/logo.pnng")
     }).catch(()=>{
         console.log('extension is not png')
     })
+    */
