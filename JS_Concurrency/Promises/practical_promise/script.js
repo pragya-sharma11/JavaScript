@@ -24,10 +24,17 @@ function resize(filename){
         }
     })
 }
-
+/*
 download('http://cb.lk/logo.png')
     .then(function (filename){
         resize(filename).then(function (resizedFile){
             console.log("resized file is at : "+resizedFile)
         })
+    })
+*/
+//can also do like
+download("http://cb.lk/logo.png")
+    .then(resize)
+    .then((resizedFile)=>{
+        console.log("resize file is at : "+resizedFile)
     })
