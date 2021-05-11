@@ -5,6 +5,7 @@ function download(url){
             reject(new Error("url does not start with http")) 
         }
         else{
+            console.log("start download the file from " + url)
             setTimeout(function(){ //fake 3 sec download time
                 let filename=url.split("/").pop()
                 resolve(filename)
@@ -19,6 +20,7 @@ function resize(filename){
             //reject()
             reject(new Error("file is not png"))
         } else{
+            console.log("start resizing the file : "+ filename)
             setTimeout(function (){ //fake 0 sec to resize
                 let resizedFile = filename.split(".")[0]+"-resize.png";
                 resolve(resizedFile)
@@ -33,6 +35,7 @@ function upload(resizefile){
         reject(new Error("File is not resized"))
     }
     else{
+        console.log("start uploading the file : " + resizefile)
         setTimeout(()=>{
             let uploadUrl="http://upload.file/"+resizefile;
             resolve(uploadUrl);
