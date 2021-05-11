@@ -34,8 +34,8 @@ download('http://cb.lk/logo.png')
         }).catch(()=>{
             console.log("extension is not png")
         })
-    }).catch(()=>{
-        console.log("Protocol is not http.")
+    }).catch((err)=>{
+        console.error(err)
     })
 
 //can also do like
