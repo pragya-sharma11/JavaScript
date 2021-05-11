@@ -35,7 +35,7 @@ download('ftp://cb.lk/logo.png')
             console.log("extension is not png")
         })
     }).catch((err)=>{
-        console.error(err)
+        console.error(err)//same as console.log but console.error() prints in red color
     })
 
 //can also do like
