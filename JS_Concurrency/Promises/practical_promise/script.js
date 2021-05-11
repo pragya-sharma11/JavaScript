@@ -27,7 +27,7 @@ function resize(filename){
     })
 }
 
-download('http://cb.lk/logo.png')
+download('ftp://cb.lk/logo.png')
     .then(function (filename){
         resize(filename).then(function (resizedFile){
             console.log("resized file is at : "+resizedFile)
