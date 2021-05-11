@@ -39,6 +39,7 @@ function upload(resizefile){
         setTimeout(()=>{
             let uploadUrl="http://upload.file/"+resizefile;
             resolve(uploadUrl);
+
         }, 3000)
     }
 })
@@ -61,7 +62,7 @@ download("http://cb.lk/logo.png")
     .then(resize)
     .then(upload)
     .then((uploadfile)=>{
-        console.log("file has been uploaded!!!") //print after 6 sec
+        console.log("file has been uploaded to : "+ " http://upload.file/" + uploadfile) //print after 6 sec
     })
     .catch((err)=>{
         console.error(err)
